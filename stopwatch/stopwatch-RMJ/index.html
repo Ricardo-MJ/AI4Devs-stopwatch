@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch & Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            background-color: #3b3f47;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons div {
+            cursor: pointer;
+            padding: 20px;
+            background-color: #50565f;
+            border-radius: 10px;
+            width: 120px;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            transition: background-color 0.2s ease;
+        }
+        .buttons div:hover {
+            background-color: #666d78;
+        }
+        .hidden {
+            display: none;
+        }
+        .display {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .actions button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #666d78;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .actions button:hover {
+            background-color: #828996;
+        }
+        .number-pad {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .number-pad button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            background-color: #50565f;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .number-pad button:hover {
+            background-color: #666d78;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select an Option</h1>
+        <div class="buttons">
+            <div id="stopwatch-option">Stopwatch</div>
+            <div id="timer-option">Timer</div>
+        </div>
+
+        <!-- Timer Screen -->
+        <div id="timer-screen" class="hidden">
+            <h1>Timer</h1>
+            <div class="display" id="timer-display">00:00:00:000</div>
+            <div class="actions">
+                <button id="start-timer">Start</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+        </div>
+
+        <!-- Stopwatch Screen -->
+        <div id="stopwatch-screen" class="hidden">
+            <h1>Stopwatch</h1>
+            <div class="display" id="stopwatch-display">00:00:00:000</div>
+            <div class="number-pad" id="number-pad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>0</button>
+            </div>
+            <div class="actions">
+                <button id="start-stopwatch">Start</button>
+                <button id="reset-stopwatch">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
